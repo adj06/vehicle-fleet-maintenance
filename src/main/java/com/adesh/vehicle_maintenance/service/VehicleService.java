@@ -19,4 +19,9 @@ public class VehicleService {
         return repository.findAll().stream().toList();
     }
 
+    public Vehicle getVehicleById(Long id){
+        Vehicle vehicle  = repository.findById(id).orElseThrow(()-> new RuntimeException("Vehicle not found with id" + id));
+        return vehicle;
+    }
+
 }
