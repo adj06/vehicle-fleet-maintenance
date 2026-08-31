@@ -22,6 +22,10 @@ public class Vehicle {
         this.status = status;
     }
 
+    public Vehicle(){
+
+    }
+
     public Long getId() {
         return id;
     }
