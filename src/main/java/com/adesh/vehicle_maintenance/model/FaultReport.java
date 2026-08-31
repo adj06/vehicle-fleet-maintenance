@@ -1,7 +1,5 @@
 package com.adesh.vehicle_maintenance.model;
 
-import com.sun.tools.javac.Main;
-
 import java.time.LocalDate;
 
 public class FaultReport {

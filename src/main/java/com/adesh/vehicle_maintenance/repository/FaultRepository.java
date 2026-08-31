@@ -1,4 +1,6 @@
 package com.adesh.vehicle_maintenance.repository;
 
-public class FaultRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface FaultRepository extends JpaRepository {
 }
