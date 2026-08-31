@@ -1,6 +1,9 @@
 package com.adesh.vehicle_maintenance.repository;
 
+import com.adesh.vehicle_maintenance.model.MaintenanceRecord;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface MaintenanceController extends JpaRepository {
+@Repository
+public interface MaintenanceController extends JpaRepository<MaintenanceRecord, Long> {
 }
