@@ -23,20 +23,20 @@ public class Vehicle {
     private String model;
 
     @NotNull(message = "Year can't be null")
-    @Min(value=2000, message = "Minimum year has to be the year 2000")
-    @Max(value=2026, message = "Maximum year has to be the year 2026")
-    private int year;
+    @Min(value=1900, message = "Minimum year has to be the year 1900")
+    @Max(value=2027, message = "Maximum year has to be the year 2027")
+    private Integer year;
 
     @NotNull(message = "Mileage value can't be null")
-    @Min(value = 0, message = "Mileage has to be a maximum of 0")
+    @Min(value = 0, message = "Mileage can't be negative")
     @Max(value = 150000, message = "Mileage has to be maximum of 150000")
-    private int mileage;
+    private Integer mileage;
 
     @NotNull(message = "Vehicle status can't be null")
     @Enumerated(EnumType.STRING)
     private VehicleStatus status;
 
-    public Vehicle(Long id, String registration, String make, String model, int year, int mileage, VehicleStatus status){
+    public Vehicle(Long id, String registration, String make, String model, Integer year, Integer mileage, VehicleStatus status){
         this.id = id;
         this.registration = registration;
         this.make = make;
@@ -86,15 +86,15 @@ public class Vehicle {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
-    public int getMileage() {
+    public Integer getMileage() {
         return mileage;
     }
 
-    public void setMileage(int mileage) {
+    public void setMileage(Integer mileage) {
         this.mileage = mileage;
     }
 
